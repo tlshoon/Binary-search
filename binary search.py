@@ -63,3 +63,54 @@
 # input_data = sys.stdin.readline().rstrip()
 #
 # print(input_data)
+
+# 부품 찾기
+# def binary_search(array,target,start,end):
+#     while start <= end:
+#         mid = (start + end) // 2
+#         if array[mid] == target:
+#             return mid
+#         elif array[mid] < target:
+#             start = mid + 1
+#         else:
+#             end = mid - 1
+#     return None
+#
+# n = int(input())
+# array = list(map(int,input().split()))
+# array.sort()
+#
+# m = int(input())
+# x = list(map(int,input().split()))
+#
+# for i in x:
+#     result = binary_search(array,i,0,n-1)
+#     if result != None:
+#         print("yes", end= ' ')
+#     else:
+#         print('no', end=' ')
+
+# 떡볶이 떡 만들기
+# n, m = list(map(int,input().split(' ')))
+# array = list(map(int,input().split()))
+#
+# stat = 0  # 이진 탐색을 위한 시작점과 끝점 선점
+# end = max(array)
+#
+# result = 0
+# while(stat<=end):
+#     total = 0
+#     mid = (stat+end) // 2
+#     for x in array:
+#         if x > mid: # 잘랐을 때 떡의 양 계산
+#             total += x - mid
+#     if total < m: # 떡의 양이 부족한 경우 더 많이 자르기(왼쪽 부분 탐색)
+#         end = mid - 1
+#     else: # 떡의 양이 충분한 경우 덜 자르기(오른쪽 부분 탐색)
+#         result = mid  # 최대한 덜 잘랐을 때가 정답이므로, 여기에서 resul에 기록
+#         stat = mid + 1
+# print(result)
+
+
+
+
